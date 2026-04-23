@@ -1,412 +1,442 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azzle - AI Technology & Startup HTML Template</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- header -->
+   <!-- Tailwinds -->
+   <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+    <!-- Font awesomes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Flowbites -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Tốc độ hiệu ứng (ms)
+    once: true,     // Chỉ chạy hiệu ứng một lần khi cuộn xuống
+    offset: 100,    // Khoảng cách từ dưới lên trước khi hiện (px)
+  });
+</script>
+</head>
+<body>
+    <!-- Cost-effect -->
+   <div class="reveal min-h-screen flex flex-col items-center justify-start py-20 px-4 " data-aos="fade-up">
+    
+    <div class="text-center max-w-3xl mb-12">
+        <h1 class="text-7xl sm:text-4xl md:text-3xl font-extrabold text-black leading-[1.1] tracking-tight text-center">
+            Cost-effectively <br> build any software
+        </h1>
+    </div>
 
-    <header>
-      <nav
-        class="dark:bg-gray-900 fixed w-full z-20 top-0 start-0 dark:border-gray-600"
-      >
-        <div
-          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
-        >
-          <a
-            href="https://flowbite.com/"
-            class="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <span
-              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-              >Cyber Crypto</span
-            >
-          </a>
-          <div
-            class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
-          >
-            <button
-              type="button"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Get started
+    <div class="flex justify-center mb-20 py-30">
+        <div class="relative flex w-64 h-14 bg-white border-2 border-black rounded-full p-1 cursor-pointer items-center">
+            <div id="slider" class="absolute top-1 left-1 w-[calc(50%-4px)] h-[calc(100%-8px)] bg-black rounded-full transition-all duration-300"></div>
+            <button id="btn-monthly" class="relative z-10 flex-1 text-center font-bold text-sm text-white">Monthly</button>
+            <button id="btn-annually" class="relative z-10 flex-1 text-center font-bold text-sm text-black">Annually</button>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl items-stretch py-20">
+        
+        <div class="group bg-[#eee7de] text-black rounded-2xl p-10 flex flex-col transition-all duration-300 hover:bg-black hover:text-white hover:scale-105 shadow-sm hover:shadow-2xl">
+            <div class="flex-grow">
+                <h3 class="text-2xl font-bold">Beginner</h3>
+                <p class="text-sm opacity-70 mb-8 group-hover:text-gray-400">Up to 10 members</p>
+                <div class="text-6xl font-bold border-t border-black/10 pt-8 mb-6 group-hover:border-white/20 transition-colors">
+                    $<span class="price" data-monthly="25" data-yearly="240">25</span><span class="text-lg font-normal">/Per month</span>
+                </div>
+                <p class="text-gray-700 text-lg mb-10 group-hover:text-gray-300 leading-relaxed">This is an excellent option for people & small businesses who are starting out.</p>
+            </div>
+            <button class="w-full py-4 border-2 border-black rounded-full font-bold transition-all group-hover:border-[#ff4d00] group-hover:hover:bg-[#ff4d00]">
+                Choose the plan
             </button>
-            <button
-              data-collapse-toggle="navbar-sticky"
-              type="button"
-              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-sticky"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Open main menu</span>
-              <svg
-                class="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 1h15M1 7h15M1 13h15"
-                />
-              </svg>
+        </div>
+
+        <div class="group bg-[#eee7de] text-black rounded-2xl p-10 flex flex-col transition-all duration-300 hover:bg-black hover:text-white hover:scale-105 shadow-sm hover:shadow-2xl">
+            <div class="flex-grow">
+                <h3 class="text-2xl font-bold">Starter</h3>
+                <p class="text-sm opacity-70 mb-8 group-hover:text-gray-400">Up to 50 members</p>
+                <div class="text-6xl font-bold border-t border-black/10 pt-8 mb-6 group-hover:border-white/20 transition-colors">
+                    $<span class="price" data-monthly="89" data-yearly="960">89</span><span class="text-lg font-normal">/Per month</span>
+                </div>
+                <p class="text-gray-700 text-lg mb-10 group-hover:text-gray-300 leading-relaxed">This plan is suitable for e-commerce stores as well as professional blogs.</p>
+            </div>
+            <button class="w-full py-4 border-2 border-black rounded-full font-bold transition-all group-hover:border-[#ff4d00] group-hover:hover:bg-[#ff4d00]">
+                Choose the plan
             </button>
-          </div>
-          <div
-            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-sticky"
-          >
-            <ul
-              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-            >
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                  aria-current="page"
-                  >Home</a
-                >
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  >Page</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  >Portfolio</a
-                >
-              </li>
-            </ul>
-          </div>
         </div>
-      </nav>
-    </header>
 
-    <!-- caulosel -->
-    <section class="py-[200px]">
-      <div class="container mx-auto grid md:grid-cols-2">
-        <div class="carousel_left space-y-10">
-          <h1 class="text-7xl font-bold">
-            Trsuted & Secure <span class="text-gadiant"> Crypto</span> Market
-            Exchange.
-          </h1>
-          <p class="text-2xl text-white opacity-75">
-            Already have a website? Try our hosting to alive it with
-            industry-leading load times.
-          </p>
-          <button class="btn-gradient">Start Trading</button>
-          <h1 class="text-7xl">A+ Rating</h1>
-          <p class="text-gray-500">
-            Avg rating 4.8 makes us world most best apps.
-          </p>
+        <div class="group bg-[#eee7de] text-black rounded-2xl p-10 flex flex-col transition-all duration-300 hover:bg-black hover:text-white hover:scale-105 shadow-sm hover:shadow-2xl">
+            <div class="flex-grow">
+                <h3 class="text-2xl font-bold">Pro</h3>
+                <p class="text-sm opacity-70 mb-8 group-hover:text-gray-400">Up to 100 members</p>
+                <div class="text-6xl font-bold border-t border-black/10 pt-8 mb-6 group-hover:border-white/20 transition-colors">
+                    $<span class="price" data-monthly="199" data-yearly="1800">199</span><span class="text-lg font-normal">/Per month</span>
+                </div>
+                <p class="text-gray-700 text-lg mb-10 group-hover:text-gray-300 leading-relaxed">Ideal for handling complicated projects enterprise-level projects, and websites.</p>
+            </div>
+            <button class="w-full py-4 border-2 border-black rounded-full font-bold transition-all group-hover:border-[#ff4d00] group-hover:hover:bg-[#ff4d00]">
+                Choose the plan
+            </button>
         </div>
-        <div class="carousel_right">
-          <img src="/img/bank.png" />
-        </div>
-      </div>
-    </section>
 
-    <!-- playform -->
-    <section>
-      <div class="container mx-auto">
-        <div class="title space-y-4">
-          <h1 class="text-5xl text-center">
-            Trusted <span class="text-gadiant">Cryptocurrency</span> Platform
-          </h1>
-          <p class="text-gray-500 text-1xl text-center">
-            jano has a variety of features that make it the best place to start
-            trading
-          </p>
-        </div>
-        <!-- <tab></tab> -->
-        <div class="playform_tab">
-          <div class="mb-4 ">
-            <ul class="flex justify-center"
-              class="flex flex-wrap -mb-px text-sm font-medium text-center"
-              id="default-styled-tab"
-              data-tabs-toggle="#default-styled-tab-content"
-              data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500"
-              data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
-              role="tablist"
-            >
-              <li class="me-2" role="presentation">
-                <button
-                  class="inline-block p-4 border-b-2 rounded-t-lg"
-                  id="profile-styled-tab"
-                  data-tabs-target="#styled-profile"
-                  type="button"
-                  role="tab"
-                  aria-controls="profile"
-                  aria-selected="false"
-                >
-                  Profile
-                </button>
-              </li>
+    </div>
+</div>
 
-              <li role="presentation">
-                <button
-                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                  id="contacts-styled-tab"
-                  data-tabs-target="#styled-contacts"
-                  type="button"
-                  role="tab"
-                  aria-controls="contacts"
-                  aria-selected="false"
-                >
-                  Contacts
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div id="default-styled-tab-content">
-            <div
-              class="hidden p-4"
-              id="styled-profile"
-              role="tabpanel"
-              aria-labelledby="profile-tab"
-            >
-              <div class="playform__Content grid md:grid-cols-3 gap-10">
-                <div class="playform__item flex justify-center">
-                  <div
-                    class="bg-[#ffffff12] text-center bg-neutral-primary-soft block max-w-sm p-6 rouder-2xl rounded-base shadow-xs"
-                  >
-                    <a href="#">
-                      <img class="mx-auto" src="/img/trusted_1.png" alt="" />
-                    </a>
-                    <a href="#">
-                      <h5
-                        class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading"
-                      >
-                        Best Exchange Rate
-                      </h5>
-                    </a>
-                    <p class="text-gray-500 mb-6 text-body">
-                      Convert data noise intelligent for quis lorem.
-                    </p>
-                    <i class="fa-solid fa-arrow-right fa-2x text-gray-200"></i>
-                  </div>
+    <script>
+        const btnMonthly = document.getElementById('btn-monthly');
+        const btnAnnually = document.getElementById('btn-annually');
+        const slider = document.getElementById('slider');
+        const prices = document.querySelectorAll('.price');
+        const periods = document.querySelectorAll('.period');
+
+        function updatePricing(isYearly) {
+            if (isYearly) {
+                slider.style.left = 'calc(50% + 1px)';
+                btnAnnually.classList.replace('text-black', 'text-white');
+                btnMonthly.classList.replace('text-white', 'text-black');
+            } else {
+                slider.style.left = '4px';
+                btnMonthly.classList.replace('text-black', 'text-white');
+                btnAnnually.classList.replace('text-white', 'text-black');
+            }
+
+            // giá trị số
+            prices.forEach(p => {
+                p.innerText = isYearly ? p.getAttribute('data-yearly') : p.getAttribute('data-monthly');
+            });
+
+            // text đơn vị
+            periods.forEach(per => {
+                per.innerText = isYearly ? '/Per year' : '/Per month';
+            });
+        }
+
+        btnMonthly.onclick = () => updatePricing(false);
+        btnAnnually.onclick = () => updatePricing(true);
+    </script>
+    
+     <!-- Freely ask -->
+    <section class=" py-12 md:py-24 px-4 sm:px-6 lg:px-8 " >
+    <div class="reveal grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start" data-aos="fade-left" data-aos-delay="200">
+        
+        <div class="space-y-6">
+            <h2 class="text-7xl sm:text-3xl md:text-3xl lg:text-7xl font-extrabold text-black leading-[1.1] tracking-tight text-center">
+                Freely ask us for <br> more information
+            </h2>
+            <p class="text-gray-700 text-2xl">
+                Our AI SaaS solutions can be quickly deployed, enabling users to start benefiting from AI capabilities without lengthy setup and development times in fast-paced industries.
+            </p>
+           <button class="px-10 py-4 bg-black text-white rounded-full font-bold shadow-lg transition-all duration-300 hover:bg-[#ff4d00] hover:shadow-[#ff4d00]/20 active:scale-95">
+                    Ask you questions
+            </button>
+        </div>
+
+        <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-transparent text-black" data-inactive-classes="text-gray-500">
+            
+            <div class="border-b border-black/10 py-4">
+                <h2 id="accordion-flush-heading-1">
+                    <button type="button" class="flex items-center justify-between w-full font-bold text-left text-xl py-4 group" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+                        <span>How do I start AI SaaS?</span>
+                        <svg data-accordion-icon class="w-4 h-4 rotate-180 shrink-0 transition-transform duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                    <div class="py-2">
+                        <p class="text-gray-600 leading-relaxed">Go to the our official website and require users to create an account. You'll need to provide some basic information and agree to our terms and conditions.</p>
+                    </div>
                 </div>
-                <div class="playform__item flex justify-center">
-                  <div
-                    class="bg-[#ffffff12] text-center bg-neutral-primary-soft block max-w-sm p-6 rouder-2xl rounded-base shadow-xs"
-                  >
-                    <a href="#">
-                      <img class="mx-auto" src="/img/trusted_1.png" alt="" />
-                    </a>
-                    <a href="#">
-                      <h5
-                        class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading"
-                      >
-                        Best Exchange Rate
-                      </h5>
-                    </a>
-                    <p class="text-gray-500 mb-6 text-body">
-                      Convert data noise intelligent for quis lorem.
-                    </p>
-                    <i class="fa-solid fa-arrow-right fa-2x text-gray-200"></i>
-                  </div>
-                </div>
-                <div class="playform__item flex justify-center">
-                  <div
-                    class="bg-[#ffffff12] text-center bg-neutral-primary-soft block max-w-sm p-6 rouder-2xl rounded-base shadow-xs"
-                  >
-                    <a href="#">
-                      <img class="mx-auto" src="/img/trusted_1.png" alt="" />
-                    </a>
-                    <a href="#">
-                      <h5
-                        class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading"
-                      >
-                        Best Exchange Rate
-                      </h5>
-                    </a>
-                    <p class="text-gray-500 mb-6 text-body">
-                      Convert data noise intelligent for quis lorem.
-                    </p>
-                    <i class="fa-solid fa-arrow-right fa-2x text-gray-200"></i>
-                  </div>
-                </div>
-                <div class="playform__item flex justify-center">
-                  <div
-                    class="bg-[#ffffff12] text-center bg-neutral-primary-soft block max-w-sm p-6 rouder-2xl rounded-base shadow-xs"
-                  >
-                    <a href="#">
-                      <img class="mx-auto" src="/img/trusted_1.png" alt="" />
-                    </a>
-                    <a href="#">
-                      <h5
-                        class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading"
-                      >
-                        Best Exchange Rate
-                      </h5>
-                    </a>
-                    <p class="text-gray-500 mb-6 text-body">
-                      Convert data noise intelligent for quis lorem.
-                    </p>
-                    <i class="fa-solid fa-arrow-right fa-2x text-gray-200"></i>
-                  </div>
-                </div>
-                <div class="playform__item flex justify-center">
-                  <div
-                    class="bg-[#ffffff12] text-center bg-neutral-primary-soft block max-w-sm p-6 rouder-2xl rounded-base shadow-xs"
-                  >
-                    <a href="#">
-                      <img class="mx-auto" src="/img/trusted_1.png" alt="" />
-                    </a>
-                    <a href="#">
-                      <h5
-                        class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading"
-                      >
-                        Best Exchange Rate
-                      </h5>
-                    </a>
-                    <p class="text-gray-500 mb-6 text-body">
-                      Convert data noise intelligent for quis lorem.
-                    </p>
-                    <i class="fa-solid fa-arrow-right fa-2x text-gray-200"></i>
-                  </div>
-                </div>
-                <div class="playform__item flex justify-center">
-                  <div
-                    class="bg-[#ffffff12] text-center bg-neutral-primary-soft block max-w-sm p-6 rouder-2xl rounded-base shadow-xs"
-                  >
-                    <a href="#">
-                      <img class="mx-auto" src="/img/trusted_1.png" alt="" />
-                    </a>
-                    <a href="#">
-                      <h5
-                        class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading"
-                      >
-                        Best Exchange Rate
-                      </h5>
-                    </a>
-                    <p class="text-gray-500 mb-6 text-body">
-                      Convert data noise intelligent for quis lorem.
-                    </p>
-                    <i class="fa-solid fa-arrow-right fa-2x text-gray-200"></i>
-                  </div>
-                </div>
-                <div class="playform__item flex justify-center">
-                  <div
-                    class="bg-[#ffffff12] text-center bg-neutral-primary-soft block max-w-sm p-6 rouder-2xl rounded-base shadow-xs"
-                  >
-                    <a href="#">
-                      <img class="mx-auto" src="/img/trusted_1.png" alt="" />
-                    </a>
-                    <a href="#">
-                      <h5
-                        class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading"
-                      >
-                        Best Exchange Rate
-                      </h5>
-                    </a>
-                    <p class="text-gray-500 mb-6 text-body">
-                      Convert data noise intelligent for quis lorem.
-                    </p>
-                    <i class="fa-solid fa-arrow-right fa-2x text-gray-200"></i>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            <div
-              class="hidden p-4 "
-              id="styled-contacts"
-              role="tabpanel"
-              aria-labelledby="contacts-tab"
-            >
-              <div class="playform__Content grid md:grid-cols-3 gap-10">
-                <div class="playform__item flex justify-center">
-                  <div
-                    class="bg-[#ffffff12] text-center bg-neutral-primary-soft block max-w-sm p-6 rouder-2xl rounded-base shadow-xs"
-                  >
-                    <a href="#">
-                      <img class="mx-auto" src="/img/trusted_1.png" alt="" />
-                    </a>
-                    <a href="#">
-                      <h5
-                        class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading"
-                      >
-                        Best Exchange Rate
-                      </h5>
-                    </a>
-                    <p class="text-gray-500 mb-6 text-body">
-                      Convert data noise intelligent for quis lorem.
-                    </p>
-                    <i class="fa-solid fa-arrow-right fa-2x text-gray-200"></i>
-                  </div>
-                </div>
-                <div class="playform__item flex justify-center">
-                  <div
-                    class="bg-[#ffffff12] text-center bg-neutral-primary-soft block max-w-sm p-6 rouder-2xl rounded-base shadow-xs"
-                  >
-                    <a href="#">
-                      <img class="mx-auto" src="/img/trusted_1.png" alt="" />
-                    </a>
-                    <a href="#">
-                      <h5
-                        class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading"
-                      >
-                        Best Exchange Rate
-                      </h5>
-                    </a>
-                    <p class="text-gray-500 mb-6 text-body">
-                      Convert data noise intelligent for quis lorem.
-                    </p>
-                    <i class="fa-solid fa-arrow-right fa-2x text-gray-200"></i>
-                  </div>
-                </div>
-                <div class="playform__item flex justify-center">
-                  <div
-                    class="bg-[#ffffff12] text-center bg-neutral-primary-soft block max-w-sm p-6 rouder-2xl rounded-base shadow-xs"
-                  >
-                    <a href="#">
-                      <img class="mx-auto" src="/img/trusted_1.png" alt="" />
-                    </a>
-                    <a href="#">
-                      <h5
-                        class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading"
-                      >
-                        Best Exchange Rate
-                      </h5>
-                    </a>
-                    <p class="text-gray-500 mb-6 text-body">
-                      Convert data noise intelligent for quis lorem.
-                    </p>
-                    <i class="fa-solid fa-arrow-right fa-2x text-gray-200"></i>
-                  </div>
+            <div class="border-b border-black/10 py-4">
+                <h2 id="accordion-flush-heading-2">
+                    <button type="button" class="flex items-center justify-between w-full font-bold text-left text-xl py-4 group" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                        <span>Can I customize AI SaaS solutions?</span>
+                        <svg data-accordion-icon class="w-4 h-4 shrink-0 transition-transform duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                    <div class="py-2">
+                        <p class="text-gray-600 leading-relaxed">Go to the our official website and require users to create an account. You'll need to provide some basic information and agree to our terms and conditions.</p>
+                    </div>
                 </div>
             </div>
-          </div>
+
+            <div class="border-b border-black/10 py-4">
+                <h2 id="accordion-flush-heading-3">
+                    <button type="button" class="flex items-center justify-between w-full font-bold text-left text-xl py-4 group" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                        <span>How can AI benefit my business?</span>
+                        <svg data-accordion-icon class="w-4 h-4 shrink-0 transition-transform duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                    <div class="py-2">
+                        <p class="text-gray-600 leading-relaxed">Go to the our official website and require users to create an account. You'll need to provide some basic information and agree to our terms and conditions.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
-    </section>
-    <footer>Footer của Minh</footer>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-  </body>
+    </div>
+</section>
+    <!-- feedback -->
+   <section class="reveal flex justify-center items-center bg-black py-24 px-4" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+        
+        <div class="mb-16">
+            <h2 class="text-7xl sm:text-3xl md:text-3xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight text-center">
+                Positive feedback <br> from our users
+            </h2>
+        </div>
+
+        <div class="items-center grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="bg-[#111] border border-white/10 rounded-2xl p-8 flex flex-col hover:border-[#ff4d00]/50 transition-all duration-300">
+                <div class="flex gap-1 mb-6">
+                    <span class="text-[#ff4d00] text-xl">★★★★★</span>
+                </div>
+                <p class="text-gray-300 text-lg leading-relaxed mb-8 flex-grow">
+                    "This AI SaaS tool has revolutionized the way we process and analyze data. This is a game-changer for our business."
+                </p>
+                <div class="flex items-center gap-4">
+                    <img src="img/testimonial-img-1.jpg" alt="Avatar" class="w-17 h-17 rounded-full ">
+                    <div>
+                        <h4 class="text-white font-bold">Max Weber</h4>
+                        <p class="text-gray-500 text-sm">HR Manager</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#111] border border-white/10 rounded-2xl p-8 flex flex-col hover:border-[#ff4d00]/50 transition-all duration-300">
+                <div class="flex gap-1 mb-6">
+                    <span class="text-[#ff4d00] text-xl">★★★★★</span>
+                </div>
+                <p class="text-gray-300 text-lg leading-relaxed mb-8 flex-grow">
+                    "It answers immediately, and we've seen a significant reduction in response time. Our customers love it and so do we!"
+                </p>
+                <div class="flex items-center gap-4">
+                    <img src="img/testimonial-img-2.jpg" alt="Avatar" class="w-17 h-17 rounded-full ">
+                    <div>
+                        <h4 class="text-white font-bold">Douglas Smith</h4>
+                        <p class="text-gray-500 text-sm">Businessman</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#111] border border-white/10 rounded-2xl p-8 flex flex-col hover:border-[#ff4d00]/50 transition-all duration-300">
+                <div class="flex gap-1 mb-6">
+                    <span class="text-[#ff4d00] text-xl">★★★★★</span>
+                </div>
+                <p class="text-gray-300 text-lg leading-relaxed mb-8 flex-grow">
+                    "It is accurate, fast and supports multiple languages support. It is a must for any international business success."
+                </p>
+                <div class="flex items-center gap-4">
+                    <img src="img/testimonial-img-3.jpg" alt="Avatar" class="w-17 h-17 rounded-full ">
+                    <div>
+                        <h4 class="text-white font-bold">Abraham Maslo</h4>
+                        <p class="text-gray-500 text-sm">Founder @ Marketing Company</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#111] border border-white/10 rounded-2xl p-8 flex flex-col hover:border-[#ff4d00]/50 transition-all duration-300">
+                <div class="flex gap-1 mb-6">
+                    <span class="text-[#ff4d00] text-xl">★★★★★</span>
+                </div>
+                <p class="text-gray-300 text-lg leading-relaxed mb-8 flex-grow">
+                    "Security is a top concern for us, and AI SaaS takes it seriously. It's a reassuring layer of protection for our organization."
+                </p>
+                <div class="flex items-center gap-4">
+                    <img src="img/testimonial-img-4.jpg" alt="Avatar" class="w-17 h-17 rounded-full ">
+                    <div>
+                        <h4 class="text-white font-bold">Jack Fayol</h4>
+                        <p class="text-gray-500 text-sm">HR Manager</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#111] border border-white/10 rounded-2xl p-8 flex flex-col hover:border-[#ff4d00]/50 transition-all duration-300">
+                <div class="flex gap-1 mb-6">
+                    <span class="text-[#ff4d00] text-xl">★★★★★</span>
+                </div>
+                <p class="text-gray-300 text-lg leading-relaxed mb-8 flex-grow">
+                    "We were concerned about integrating their APIs were well documented, and their support team was super cool."
+                </p>
+                <div class="flex items-center gap-4">
+                    <img src="img/testimonial-img-5.jpg" alt="Avatar" class="w-17 h-17 rounded-full ">
+                    <div>
+                        <h4 class="text-white font-bold">Karen Lynn</h4>
+                        <p class="text-gray-500 text-sm">Software Engineer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#111] border border-white/10 rounded-2xl p-8 flex flex-col hover:border-[#ff4d00]/50 transition-all duration-300">
+                <div class="flex gap-1 mb-6">
+                    <span class="text-[#ff4d00] text-xl">★★★★★</span>
+                </div>
+                <p class="text-gray-300 text-lg leading-relaxed mb-8 flex-grow">
+                    "The return on investment has exceeded our expectations. It's an investment in the future of our business."
+                </p>
+                <div class="flex items-center gap-4">
+                    <img src="img/testimonial-img-6.jpg" alt="Avatar" class="w-17 h-17 rounded-full ">
+                    <div>
+                        <h4 class="text-white font-bold">Henry Ochi</h4>
+                        <p class="text-gray-500 text-sm">Bank Manager</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+     <!--footer  -->
+    <div class="reveal relative rounded-t-4xl bg-[#F7F3EB]  overflow-hidden">
+    
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#FF4D00] opacity-40 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative z-10">
+        </div>
+
+     <section class="bg-[#F7F3EB]  py-10 overflow-hidden border-black/5">
+    <div class="relative flex">
+        <div class="animate-marquee whitespace-nowrap flex items-center italic">
+            <span class="text-4xl md:text-8xl font-black uppercase mx-4">Start building software ✦</span>
+            <span class="text-4xl md:text-8xl font-black uppercase mx-4">Start building software ✦</span>
+            <span class="text-4xl md:text-8xl font-black uppercase mx-4">Start building software ✦</span>
+            <span class="text-4xl md:text-8xl font-black uppercase mx-4">Start building software ✦</span>
+        </div>
+        <div class="absolute animate-marquee2 whitespace-nowrap flex items-center italic">
+            <span class="text-4xl md:text-8xl font-black uppercase mx-4">Start building software ✦</span>
+            <span class="text-4xl md:text-8xl font-black uppercase mx-4">Start building software ✦</span>
+            <span class="text-4xl md:text-8xl font-black uppercase mx-4">Start building software ✦</span>
+            <span class="text-4xl md:text-8xl font-black uppercase mx-4">Start building software ✦</span>
+        </div>
+    </div>
+</section>
+
+<footer class="reveal w-full bg-[#F7F3EB] pt-20 pb-10 px-4 border-t border-black/10 flex flex-col items-center">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 items-start justify-center">
+            
+            <div class="space-y-6">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl font-bold">✦ AzZle</span>
+                </div>
+                <p class="text-gray-600 leading-relaxed">
+                    Our mission is to harness the power of AI to solve complex business challenges & decision-makers with data-driven insights.
+                </p>
+                <div class="text-black font-bold">
+                    Website: <a href="#" class="hover:text-[#ff4d00] transition-colors">www.example.com</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-black mb-6 uppercase tracking-wider">Primary Pages</h4>
+                <ul class="space-y-4 text-gray-600 font-medium">
+                    <li><a href="#" class="hover:text-[#ff4d00] transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-[#ff4d00] transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-[#ff4d00] transition-colors">Services</a></li>
+                    <li><a href="#" class="hover:text-[#ff4d00] transition-colors">Pricing</a></li>
+                    <li><a href="#" class="hover:text-[#ff4d00] transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-black mb-6 uppercase tracking-wider">Utility Pages</h4>
+                <ul class="space-y-4 text-gray-600 font-medium">
+                    <li><a href="#" class="hover:text-[#ff4d00] transition-colors">Signup</a></li>
+                    <li><a href="#" class="hover:text-[#ff4d00] transition-colors">Login</a></li>
+                    <li><a href="#" class="hover:text-[#ff4d00] transition-colors">404 Not Found</a></li>
+                    <li><a href="#" class="hover:text-[#ff4d00] transition-colors">Password Reset</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="text-lg font-black mb-6 uppercase tracking-wider">Subscribe To Our Newsletter</h4>
+                <div class="relative w-full group">
+                    <input type="email" placeholder="Enter your email" 
+                           class="w-full bg-white border-2 border-black rounded-full py-4 pl-6 pr-16 focus:outline-none focus:border-[#ff4d00] transition-all placeholder:text-gray-400">
+                    
+                    <button class="absolute right-2 top-2 bottom-2 bg-black text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-[#ff4d00] hover:scale-105 active:scale-95 shadow-md group-hover:shadow-lg">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-black/10 pt-8 text-center text-gray-500 font-medium">
+            <p>© Copyright 2023, All Rights Reserved by Mthemeus</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    @keyframes marquee {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+    @keyframes marquee2 {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(0%); }
+    }
+    .animate-marquee {
+        animation: marquee 25s linear infinite;
+    }
+    .animate-marquee2 {
+        animation: marquee2 25s linear infinite;
+    }
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+    }
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+</div>
+<script>
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.1 }); // Khi hiện được 10% khối thì chạy hiệu ứng
+
+document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    </body>
 </html>

@@ -1,28 +1,8 @@
-body{
-    background-color: #151937;
-    color:white
+* { box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
 }
-.text-gadiant{
-    background: linear-gradient(to right,rgb(255, 0, 128),rgb(230, 207, 207));
-    background-clip: text;
-    color:transparent;
-    -webkit-text-fill-color: transparent;
-}
-.btn-gradient{
-        background: linear-gradient(to right,rgb(255, 0, 128),rgb(207, 0, 145));
-        border-radius: 20px;
-        width: 150px;
-        height: 50px;
-     
-}
-.title span{
-            background: linear-gradient(to right,rgb(255, 0, 128),rgb(207, 0, 145));
-             background-clip: text;
-    color:transparent;
-    -webkit-text-fill-color: transparent;
-
-}
-.playform__item > div{
-    width: 100%;
-    max-width: none;
+.p_Freelyask{
+    padding-left: 50px;
 }
